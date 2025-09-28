@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - AI-Based Animal Type Classification System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-green-600 font-bold text-lg">🐄</span>
+                    </div>
+                    <h1 class="text-white text-xl font-bold">Bharat Pashudhan AI</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-green-200 font-medium">Home</a>
+                    <a href="classification.html" class="text-white hover:text-green-200 font-medium">Classification</a>
+                    <a href="about.html" class="text-white hover:text-green-200 font-medium">About</a>
+                    <a href="faq.html" class="text-white hover:text-green-200 font-medium bg-green-700 px-3 py-1 rounded">FAQ</a>
+                    <a href="contact.html" class="text-white hover:text-green-200 font-medium">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-white hover:text-green-200 font-medium py-2">Home</a>
+                    <a href="classification.html" class="text-white hover:text-green-200 font-medium py-2">Classification</a>
+                    <a href="about.html" class="text-white hover:text-green-200 font-medium py-2">About</a>
+                    <a href="faq.html" class="text-white hover:text-green-200 font-medium py-2 bg-green-700 px-3 py-1 rounded">FAQ</a>
+                    <a href="contact.html" class="text-white hover:text-green-200 font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Find answers to common questions about our AI-based animal classification system
+                </p>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq1')">
+                        <h3 class="text-lg font-semibold text-gray-800">How does the AI classification system work?</h3>
+                        <svg id="faq1-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq1-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700">
+                            Our system uses advanced machine learning algorithms and computer vision to analyze uploaded images of cattle or buffalo. 
+                            The AI model has been trained on thousands of images of different breeds and can identify specific characteristics 
+                            such as body structure, color patterns, horn shape, and other distinguishing features to accurately classify the breed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq2')">
+                        <h3 class="text-lg font-semibold text-gray-800">Which cattle and buffalo breeds are supported?</h3>
+                        <svg id="faq2-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq2-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            Our system supports a wide range of indigenous and exotic cattle and buffalo breeds, including:
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-green-600 mb-2">Cattle Breeds:</h4>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>• Gir</li>
+                                    <li>• Sahiwal</li>            
+                                    <li>• Tharparkar</li>
+                                    <li>• Kankrej</li>
+                                    <li>• Jersey</li>
+                                    <li>• And many more...</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-600 mb-2">Buffalo Breeds:</h4>
+                                <ul class="text-gray-700 space-y-1">
+                                    <li>• Murrah</li>
+                                    <li>• Jaffarabadi</li>  
+                                    <li>• Banni</li>
+                                    <li>• Nagpuri</li>
+                                    <li>• Toda</li>
+                                    <li>• And many more...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq3')">
+                        <h3 class="text-lg font-semibold text-gray-800">What if the confidence percentage is low?</h3>
+                        <svg id="faq3-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq3-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            If the confidence percentage is below 70%, we recommend:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Retake the photo:</strong> Ensure better lighting and clearer view of the animal</li>
+                            <li>• <strong>Check image quality:</strong> Make sure the image is not blurry or too dark</li>
+                            <li>• <strong>Review top 3 predictions:</strong> The system shows multiple possibilities for your consideration</li>
+                            <li>• <strong>Consult experts:</strong> For critical decisions, consider consulting with veterinary experts or breed specialists</li>
+                            <li>• <strong>Try different angles:</strong> Sometimes a side view or different angle provides better results</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq4')">
+                        <h3 class="text-lg font-semibold text-gray-800">What image formats and sizes are supported?</h3>
+                        <svg id="faq4-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq4-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            We support the following image formats and specifications:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Formats:</strong> PNG, JPG, JPEG</li>
+                            <li>• <strong>Maximum file size:</strong> 10MB</li>
+                            <li>• <strong>Recommended resolution:</strong> At least 800x600 pixels</li>
+                            <li>• <strong>Image quality:</strong> Clear, well-lit images work best</li>
+                            <li>• <strong>Background:</strong> Minimal background clutter preferred</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq5')">
+                        <h3 class="text-lg font-semibold text-gray-800">How accurate is the classification system?</h3>
+                        <svg id="faq5-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq5-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            Our AI system has been trained on extensive datasets and achieves high accuracy rates:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Overall accuracy:</strong> 85-95% for clear, well-lit images</li>
+                            <li>• <strong>High confidence predictions:</strong> 90%+ accuracy when confidence > 80%</li>
+                            <li>• <strong>Popular breeds:</strong> Higher accuracy for common indigenous breeds</li>
+                            <li>• <strong>Continuous improvement:</strong> Model accuracy improves with more data</li>
+                            <li>• <strong>Validation:</strong> Results are validated against expert knowledge and breed standards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq6')">
+                        <h3 class="text-lg font-semibold text-gray-800">Is my data secure and private?</h3>
+                        <svg id="faq6-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq6-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            Yes, we take data security and privacy very seriously:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>No storage:</strong> Images are processed in real-time and not stored permanently</li>
+                            <li>• <strong>Secure transmission:</strong> All data is encrypted during transmission</li>
+                            <li>• <strong>Privacy protection:</strong> No personal information is collected or stored</li>
+                            <li>• <strong>Compliance:</strong> We follow data protection regulations and best practices</li>
+                            <li>• <strong>Anonymous processing:</strong> Classification results are not linked to user identity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq7')">
+                        <h3 class="text-lg font-semibold text-gray-800">How does this support the Rashtriya Gokul Mission?</h3>
+                        <svg id="faq7-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq7-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            Our system directly supports the Rashtriya Gokul Mission by:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Breed conservation:</strong> Helping identify and preserve indigenous cattle breeds</li>
+                            <li>• <strong>Fraud prevention:</strong> Preventing misrepresentation of breeds in fairs and markets</li>
+                            <li>• <strong>Breeding programs:</strong> Supporting PT (Progeny Testing) and PS (Pedigree Selection) programs</li>
+                            <li>• <strong>Farmer empowerment:</strong> Providing farmers with accurate breed identification tools</li>
+                            <li>• <strong>Data collection:</strong> Contributing to national cattle breed database and research</li>
+                            <li>• <strong>Integration:</strong> Seamlessly integrating with the Bharat Pashudhan ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ('faq8')">
+                        <h3 class="text-lg font-semibold text-gray-800">Can I use this system on my mobile phone?</h3>
+                        <svg id="faq8-icon" class="w-5 h-5 text-gray-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq8-content" class="hidden px-6 pb-4">
+                        <p class="text-gray-700 mb-3">
+                            Absolutely! Our system is fully responsive and mobile-friendly:
+                        </p>
+                        <ul class="text-gray-700 space-y-2">
+                            <li>• <strong>Mobile optimized:</strong> Works seamlessly on smartphones and tablets</li>
+                            <li>• <strong>Camera integration:</strong> Direct camera access for taking photos</li>
+                            <li>• <strong>Touch-friendly:</strong> Easy-to-use interface designed for mobile devices</li>
+                            <li>• <strong>Fast processing:</strong> Quick results even on mobile networks</li>
+                            <li>• <strong>Cross-platform:</strong> Compatible with iOS, Android, and other mobile platforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="mt-12 bg-green-50 rounded-lg p-8 text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Still have questions?</h3>
+                <p class="text-gray-600 mb-6">
+                    If you couldn't find the answer you're looking for, feel free to contact us.
+                </p>
+                <a href="contact.html" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 AI-Based Animal Type Classification System. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Supporting the Rashtriya Gokul Mission</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Based Animal Type Classification System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-teal-bg">
+    <!-- Header -->
+    <header class="bg-white/70 backdrop-blur header-shadow">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 badge-cream rounded-full flex items-center justify-center">
+                        <span class="text-lg">🐄</span>
+                    </div>
+                    <h1 class="text-xl font-bold theme-accent">Bharat Pashudhan AI</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-gray-900 font-medium">Home</a>
+                    <a href="classification.html" class="text-gray-700 hover:text-gray-900 font-medium">Classification</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium">About</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-gray-900 font-medium">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-gray-700 hover:text-gray-900 font-medium py-2">Home</a>
+                    <a href="classification.html" class="text-gray-700 hover:text-gray-900 font-medium py-2">Classification</a>
+                    <a href="about.html" class="text-gray-700 hover:text-gray-900 font-medium py-2">About</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-gray-900 font-medium py-2">FAQ</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-gray-900 font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section with background image and overlay -->
+        <section class="hero-teal bg-cattle-default mb-12">
+            <div class="hero-teal-content h-full">
+                <div class="p-8 md:p-16 max-w-2xl">
+                    <div class="badge-teal inline-flex items-center px-3 py-1 rounded-full text-sm mb-4">National Digital Livestock Mission</div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-shadow mb-4">AI-Based Cattle & Buffalo Breed Classification</h2>
+                    <p class="text-lg md:text-xl text-white/90 mb-8">Empowering farmers with instant, accurate breed identification — inspired by Bharat Pashudhan’s vision.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="classification.html" class="btn-primary-teal px-8 py-3 rounded-lg font-semibold btn-hover">Start Classification</a>
+                        <a href="about.html" class="btn-outline-teal px-8 py-3 rounded-lg font-semibold btn-hover">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="theme-card p-6 rounded-xl text-center card-hover">
+                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl">🤖</span>
+                </div>
+                <h3 class="text-xl font-semibold theme-accent mb-3">AI/ML Technology</h3>
+                <p class="text-gray-600">Advanced machine learning algorithms for accurate cattle and buffalo breed classification</p>
+            </div>
+            <div class="theme-card p-6 rounded-xl text-center card-hover">
+                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl">📊</span>
+                </div>
+                <h3 class="text-xl font-semibold theme-accent mb-3">PT & PS Programs</h3>
+                <p class="text-gray-600">Supports Progeny Testing and Pedigree Selection programs for better breeding decisions</p>
+            </div>
+            <div class="theme-card p-6 rounded-xl text-center card-hover">
+                <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-2xl">🛡️</span>
+                </div>
+                <h3 class="text-xl font-semibold theme-accent mb-3">Fraud Prevention</h3>
+                <p class="text-gray-600">Helps prevent fraud in animal fairs and ensures authentic breed identification</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="theme-card rounded-xl p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Our Mission</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold theme-accent mb-3">Rashtriya Gokul Mission Integration</h4>
+                    <p class="text-gray-600 mb-4">
+                        Our AI-based classification system seamlessly integrates with the Bharat Pashudhan App, 
+                        supporting the national mission to conserve and develop indigenous cattle breeds.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Conserve indigenous cattle breeds</li>
+                        <li>• Improve milk productivity</li>
+                        <li>• Support dairy farmers nationwide</li>
+                        <li>• Enhance breeding programs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold theme-accent mb-3">How It Works</h4>
+                    <p class="text-gray-600 mb-4">
+                        Simply upload an image of cattle or buffalo, and our AI system will:
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Analyze the image using advanced ML models</li>
+                        <li>• Identify the breed with confidence percentage</li>
+                        <li>• Provide top 3 predictions for accuracy</li>
+                        <li>• Support farmers in making informed decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center theme-card rounded-xl p-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to Classify Your Cattle?</h3>
+            <p class="text-gray-600 mb-6">Upload an image and get instant breed classification results</p>
+            <a href="classification.html" class="btn-primary-teal px-8 py-3 rounded-lg font-semibold btn-hover">
+                Try Classification Now
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-[var(--cream-200)] text-gray-700 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 AI-Based Animal Type Classification System. All rights reserved.</p>
+            <p class="text-gray-500 mt-2">Supporting the Rashtriya Gokul Mission</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

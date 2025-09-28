@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AI-Based Animal Type Classification System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-green-600 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-green-600 font-bold text-lg">🐄</span>
+                    </div>
+                    <h1 class="text-white text-xl font-bold">Bharat Pashudhan AI</h1>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-white hover:text-green-200 font-medium">Home</a>
+                    <a href="classification.html" class="text-white hover:text-green-200 font-medium">Classification</a>
+                    <a href="about.html" class="text-white hover:text-green-200 font-medium bg-green-700 px-3 py-1 rounded">About</a>
+                    <a href="faq.html" class="text-white hover:text-green-200 font-medium">FAQ</a>
+                    <a href="contact.html" class="text-white hover:text-green-200 font-medium">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden mt-4 hidden">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="text-white hover:text-green-200 font-medium py-2">Home</a>
+                    <a href="classification.html" class="text-white hover:text-green-200 font-medium py-2">Classification</a>
+                    <a href="about.html" class="text-white hover:text-green-200 font-medium py-2 bg-green-700 px-3 py-1 rounded">About</a>
+                    <a href="faq.html" class="text-white hover:text-green-200 font-medium py-2">FAQ</a>
+                    <a href="contact.html" class="text-white hover:text-green-200 font-medium py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Page Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    About Our Mission
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Supporting the Rashtriya Gokul Mission through AI-powered cattle breed classification
+                </p>
+            </div>
+
+            <!-- Mission Overview -->
+            <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 mb-6">
+                        The AI-Based Animal Type Classification System is a cutting-edge solution designed to support 
+                        the <strong>Rashtriya Gokul Mission</strong> and integrate seamlessly with the 
+                        <strong>Bharat Pashudhan App</strong>. Our mission is to conserve indigenous cattle breeds, 
+                        improve milk productivity, and support dairy farmers across India through advanced 
+                        artificial intelligence and machine learning technologies.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-semibold text-green-600 mb-4">🎯 Core Objectives</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Conserve and develop indigenous cattle breeds</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Improve milk productivity through better breeding</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Support dairy farmers with accurate breed identification</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Prevent fraud in animal fairs and markets</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Enhance PT (Progeny Testing) and PS (Pedigree Selection) programs</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-semibold text-green-600 mb-4">🤖 Technology</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Advanced AI/ML algorithms for breed classification</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Computer vision and deep learning models</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Real-time image processing and analysis</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Integration with Bharat Pashudhan ecosystem</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-600 mr-2">•</span>
+                                    <span>Mobile-friendly responsive design</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rashtriya Gokul Mission -->
+            <section class="bg-green-50 rounded-lg p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Rashtriya Gokul Mission</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-600 mb-3">Mission Overview</h4>
+                        <p class="text-gray-700 mb-4">
+                            The Rashtriya Gokul Mission is a flagship scheme launched by the Government of India 
+                            to conserve and develop indigenous cattle breeds in a focused and scientific manner.
+                        </p>
+                        <p class="text-gray-700">
+                            Our AI classification system directly supports this mission by providing accurate 
+                            breed identification tools that help farmers, breeders, and government agencies 
+                            make informed decisions about cattle breeding and conservation.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-600 mb-3">Key Benefits</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Enhanced breed conservation efforts</li>
+                            <li>• Improved genetic diversity management</li>
+                            <li>• Better breeding program outcomes</li>
+                            <li>• Increased farmer confidence in breed selection</li>
+                            <li>• Reduced fraud in cattle trading</li>
+                            <li>• Data-driven policy making support</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How We Help Farmers -->
+            <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">How We Help Farmers</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📱</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Easy Access</h4>
+                        <p class="text-gray-600">Simple mobile interface for instant breed classification</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Accurate Results</h4>
+                        <p class="text-gray-600">High-precision AI models with confidence scoring</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">💡</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Informed Decisions</h4>
+                        <p class="text-gray-600">Support breeding and trading decisions with data</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact -->
+            <section class="bg-blue-50 rounded-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Impact</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600 mb-3">Supporting Dairy Industry</h4>
+                        <p class="text-gray-700 mb-4">
+                            By providing accurate breed identification, we help farmers make better breeding 
+                            decisions that lead to improved milk productivity and genetic quality of their herds.
+                        </p>
+                        <p class="text-gray-700">
+                            This directly contributes to the sustainability and growth of India's dairy sector, 
+                            supporting millions of farmers and ensuring food security.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-blue-600 mb-3">Conservation Efforts</h4>
+                        <p class="text-gray-700 mb-4">
+                            Our system helps identify and preserve indigenous cattle breeds that are at risk 
+                            of extinction, ensuring genetic diversity for future generations.
+                        </p>
+                        <p class="text-gray-700">
+                            By making breed identification accessible to everyone, we democratize conservation 
+                            efforts and involve the entire farming community in protecting our heritage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 AI-Based Animal Type Classification System. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Supporting the Rashtriya Gokul Mission</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

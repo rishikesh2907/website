@@ -1,0 +1,396 @@
+/* Custom styles for AI-Based Animal Type Classification System */
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* ===============================
+   Premium Dark Teal Theme Palette
+   =============================== */
+:root {
+    --teal-900: #0a3b3b;
+    --teal-800: #0f4a4a;
+    --teal-700: #125a5a;
+    --teal-600: #1d7a7a;
+    --teal-500: #259c9c;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-700: #374151;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.theme-teal-bg {
+    background-color: var(--gray-50);
+}
+
+.theme-card {
+    background-color: white;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-soft);
+}
+
+.theme-accent {
+    color: var(--teal-700);
+}
+
+.btn-primary-teal {
+    background-color: var(--teal-700);
+    color: white;
+}
+
+.btn-primary-teal:hover {
+    background-color: var(--teal-600);
+}
+
+.btn-outline-teal {
+    background-color: transparent;
+    color: var(--teal-700);
+    border: 2px solid var(--teal-700);
+}
+
+.btn-outline-teal:hover {
+    background-color: var(--gray-100);
+}
+
+.badge-teal {
+    background-color: rgba(18, 90, 90, 0.12);
+    color: var(--teal-700);
+}
+
+/* Hero with image background and teal overlay */
+.hero-teal {
+    position: relative;
+    min-height: 60vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-teal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(90%) contrast(95%);
+}
+
+/* Set image dynamically via inline style on page or use this fallback */
+.hero-teal.bg-cattle-default::before {
+    background-image: url('images/cow4.jpg');
+}
+.hero-teal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10,59,59,0.85) 0%, rgba(10,59,59,0.60) 40%, rgba(10,59,59,0.20) 100%);
+}
+
+.hero-teal-content {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Utility classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--teal-700);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--teal-600);
+}
+
+/* Header enhancements */
+.header-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Button hover effects */
+.btn-hover {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Form enhancements */
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    transform: scale(1.02);
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--teal-700);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Image upload area */
+.upload-area {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: var(--teal-700);
+    background-color: var(--gray-100);
+}
+
+.upload-area.dragover {
+    border-color: var(--teal-700);
+    background-color: var(--gray-100);
+    transform: scale(1.02);
+}
+
+/* Results animation */
+.result-item {
+    animation: slideIn 0.5s ease-out;
+}
+
+.result-item:nth-child(1) { animation-delay: 0.1s; }
+.result-item:nth-child(2) { animation-delay: 0.2s; }
+.result-item:nth-child(3) { animation-delay: 0.3s; }
+
+/* FAQ accordion */
+.faq-item {
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+    transform: rotate(180deg);
+}
+
+/* Success/Error message styles */
+.message-success {
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+}
+
+.message-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .mobile-padding {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .mobile-text {
+        font-size: 0.875rem;
+    }
+    
+    .mobile-button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .bg-green-600 { background: var(--teal-700) !important; color: white !important; }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-600 {
+        color: #374151 !important;
+    }
+    
+    .text-gray-700 {
+        color: #1f2937 !important;
+    }
+    
+    .border-gray-300 {
+        border-color: #6b7280 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus {
+    outline: 2px solid var(--teal-700);
+    outline-offset: 2px;
+}
+
+/* Custom gradient backgrounds */
+.gradient-green {
+    background: linear-gradient(135deg, var(--teal-700) 0%, var(--teal-600) 100%);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Custom shadows */
+.shadow-green {
+    box-shadow: 0 4px 14px 0 rgba(18, 90, 90, 0.25);
+}
+
+.shadow-blue {
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.25);
+}
+
+/* Text selection */
+::selection {
+    background-color: var(--teal-700);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--teal-700);
+    color: white;
+}
+
+/* Custom utility classes */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
