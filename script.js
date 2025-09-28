@@ -187,7 +187,7 @@ async function classifyImage() {
         // ============================================================================
         // API CALL - Replace with actual endpoint
         // ============================================================================
-        const response = await fetch('https://old-flask-85zf.onrender.com/predict', {
+        const response = await fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: formData
         });
